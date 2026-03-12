@@ -6,6 +6,12 @@ const mongoose = require("mongoose");
 const app = express();
 
 app.use(express.json());
+/* ---------------- ROOT ROUTE ---------------- */
+/* Check if server is running */
+
+app.get("/", (req,res)=>{
+res.status(200).send("Library Management API - Render Deployment Successful 🚀");
+});
 
 /* ---------------- MongoDB Connection ---------------- */
 
